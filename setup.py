@@ -65,5 +65,5 @@ if __name__ == "__main__":
           package_data=find_package_data(CODE_ROOT),
           package_dir={PCKG_NAME : CODE_ROOT},
           scripts=SCRIPTS,
-          data_files = [ ( sysconfig.PREFIX+'/etc', ['supervisord.conf', os.path.join(PCKG_NAME + '/config/gunicorn.py'] ) ]
+          data_files = [ sysconfig.PREFIX+'/etc', 'supervisord.conf', os.path.join( PCKG_NAME, '/config/gunicorn.py' ) ]
          )
